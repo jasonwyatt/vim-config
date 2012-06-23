@@ -43,3 +43,6 @@ let g:SuperTabDefaultCompletionType = "context"
 set showmode
 set showcmd
 
+" set up code folding for javascript
+autocmd FileType javascript call JavaScriptFold()
+autocmd FileType javascript set foldtext=getline(v:foldstart)
