@@ -4,6 +4,7 @@ call pathogen#runtime_append_all_bundles()
 
 set ls=2
 set ruler
+set number
 
 set shiftwidth=4
 set tabstop=4
@@ -41,3 +42,4 @@ let g:SuperTabDefaultCompletionType = "context"
 " in the status line
 set showmode
 set showcmd
+
