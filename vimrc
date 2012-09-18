@@ -36,7 +36,7 @@ autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=
 autocmd FileType html,xml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim
 
 " set up supertab to behave nicely with OmniComplete
-let g:SuperTabDefaultCompletionType = "context"
+"let g:SuperTabDefaultCompletionType = "context"
 
 " display the current mode and partially-typed commands 
 " in the status line
@@ -46,3 +46,8 @@ set showcmd
 " set up code folding for javascript
 autocmd FileType javascript call JavaScriptFold()
 autocmd FileType javascript set foldtext=getline(v:foldstart)
+
+" set up vim so that it restores cursor position after exit
+autocmd BufWinLeave ?* mkview
+autocmd BufWinEnter ?* silent loadview
+
